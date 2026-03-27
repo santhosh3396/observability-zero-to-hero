@@ -1,79 +1,116 @@
+# 🚀 7-Day Observability Project (Production-Ready)
 
-# 📚 7-Day Observability Tutorial Series
+## 📌 Overview
 
-Welcome to the 7-Day Observability Tutorial Series! This repository contains the code and detailed explanations for setting up and understanding observability in Kubernetes using Prometheus, Grafana, Elasticsearch Fluentbit, Kibana, Jaeger, groundcover(eBPF), opentelemetry e.t.c.,.
+This project demonstrates how to build a **production-grade observability platform** on Kubernetes (AWS EKS).
 
-## 📅 Overview of Each Day
+It includes:
 
-### Day 1: Introduction to Observability
-- **Concepts Covered**:
-  - Introduction to Observability, Monitoring, Logging, and Tracing.
-  - The difference between Monitoring and Observability.
-  - Tools available for Monitoring and Observability.
-  - Comparison between monitoring and observing in Bare-Metal Servers vs. Kubernetes.
-- **Key Learning**:
-  - Understand the fundamental concepts of observability.
-  - Learn why monitoring and observability are crucial in modern IT environments.
+* Metrics (Prometheus)
+* Visualization (Grafana)
+* Logging (ELK Stack)
+* Tracing (Jaeger & OpenTelemetry)
 
-### Day 2: Prometheus - Setting Up Monitoring
-- **Concepts Covered**:
-  - Introduction to Prometheus and its architecture.
-  - Setup and configuration of Prometheus in an EKS cluster.
-  - Installation of kube-prometheus-stack with Helm and integrating it with Grafana.
-  - Basic queries and setup for monitoring with Prometheus and Grafana.
-- **Key Learning**:
-  - Get hands-on experience with Prometheus and Grafana.
-  - Learn to install and configure Prometheus on Kubernetes.
+---
 
-### Day 3: Metrics and PromQL in Prometheus
-- **Concepts Covered**:
-  - Introduction to PromQL and basic querying techniques.
-  - Aggregation and functions in PromQL to analyze metrics data.
-- **Key Learning**:
-  - Master the Prometheus Query Language (PromQL) for querying and analyzing metrics.
+## 🛠 Tech Stack
 
-### Day 4: Instrumentation and Custom Metrics
-- **Concepts Covered**:
-  - Instrumentation for adding monitoring capabilities to applications.
-  - Understanding different types of metrics in Prometheus: Counter, Gauge, Histogram, and Summary.
-  - Writing custom metrics in a Node.js application using the `prom-client` library.
-  - Dockerizing the application and deploying it on Kubernetes.
-  - Setting up Alertmanager for alerting based on custom metrics.
-- **Key Learning**:
-  - Learn how to instrument applications to expose custom metrics.
-  - Configure alerts in Alertmanager to monitor application performance.
-  - Understand how to work with different types of metrics in Prometheus.
+* AWS (EKS, EC2, VPC, IAM)
+* Kubernetes
+* Terraform (Infrastructure as Code)
+* Helm
+* Prometheus & Grafana
+* ELK Stack (Elasticsearch, Fluentbit, Kibana)
+* Jaeger & OpenTelemetry
+* CI/CD (Jenkins / GitHub Actions)
 
-### Day 5: Logging with EFK Stack
-- **Concepts Covered**:
-  - Introduction to logging in distributed systems and Kubernetes.
-  - Setting up the EFK stack (Elasticsearch, Fluentbit, Kibana) on Kubernetes.
-  - Detailed setup and configuration for collecting and visualizing logs.
-  - Cleaning up the Kubernetes cluster and resources.
-- **Key Learning**:
-  - Understand the importance of logging and how to set up
+---
 
-### Day 6: Distributed Tracing with Jaeger
-- **Concepts Covered**:
-  - Introduction to Jaeger and its architecture for distributed tracing.
-  - Setting up Jaeger in a Kubernetes cluster using Helm.
-  - Instrumenting services using OpenTelemetry to enable tracing.
-  - Viewing and analyzing traces in the Jaeger UI.
-  - Cleaning up the environment after setting up Jaeger.
-- **Key Learning**:
-  - Gain insights into distributed tracing and how it helps in debugging and performance optimization.
-  - Learn how to set up and configure Jaeger for tracing in a microservices architecture.
+## 📁 Project Structure
 
-### Day 7: OpenTelemetry – Setting Up Unified Observability
-- **Concepts Covered**:
-  - Introduction to OpenTelemetry, a unified framework for observability.
-  - Understanding how OpenTelemetry integrates tracing, metrics, and logging.
-  - Comparison of OpenTelemetry with prior observability tools like Jaeger, Prometheus
-  - Supported programming languages and multi-language support in OpenTelemetry.
-  - Step-by-step setup of OpenTelemetry in Kubernetes.
-- **Key Learning**:
-  - Learn how OpenTelemetry simplifies the process of collecting and exporting telemetry data.
-  - Understand the benefits of a unified observability approach using OpenTelemetry.
-  - Gain hands-on experience with setting up OpenTelemetry Collector, Prometheus, Jaeger, and Elasticsearch to monitor a Golang microservice application.
+```
+day-1 → Observability basics  
+day-2 → Prometheus setup  
+day-3 → Grafana dashboards  
+day-4 → Logging (ELK Stack)  
+day-5 → Distributed tracing (Jaeger)  
+day-6 → OpenTelemetry  
+day-7 → Production best practices  
+```
 
-# observability-zero-to-hero
+---
+
+## ⚙️ Setup Instructions
+
+### Step 1: Clone Repository
+
+```
+git clone <your-repo-url>
+```
+
+### Step 2: Create EKS Cluster (Terraform)
+
+```
+cd terraform
+terraform init
+terraform apply
+```
+
+### Step 3: Install Helm
+
+```
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+```
+
+### Step 4: Deploy Monitoring Stack
+
+```
+helm install prometheus prometheus-community/kube-prometheus-stack
+```
+
+### Step 5: Setup Logging (ELK)
+
+* Deploy Fluentbit
+* Connect to Elasticsearch
+* Visualize in Kibana
+
+### Step 6: Setup Tracing
+
+* Deploy Jaeger
+* Integrate OpenTelemetry
+
+---
+
+## 🔥 Production Features
+
+* Infrastructure as Code using Terraform
+* Centralized logging system
+* Distributed tracing
+* Real-time monitoring dashboards
+* Scalable Kubernetes architecture
+* CI/CD pipeline ready
+
+---
+
+## 💼 Use Case
+
+This project helps teams:
+
+* Monitor microservices in real-time
+* Troubleshoot issues using logs
+* Trace requests across services
+* Improve system reliability
+
+---
+
+## 📊 Screenshots (Add later)
+
+* Grafana Dashboard
+* Kibana Logs
+* Jaeger Tracing
+
+---
+
+## 👨‍💻 Author
+
+Santosh Kuldeepalli
