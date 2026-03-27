@@ -113,4 +113,4 @@ This project helps teams:
 
 ## 👨‍💻 Author
 
-Santosh Kuldeepalli
+Santhosh Gurujupalli
